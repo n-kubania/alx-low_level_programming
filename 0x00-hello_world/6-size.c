@@ -5,9 +5,10 @@
  */
 int main(void)
 {
-printf("size of char is = %d\n", sizeof(char));
-printf("size of int is = %d\n", sizeof(int);
-printf("size of long int is = %d\n", sizeof(long int));
-printf("size of long long int is = %d\n", sizeof(long long int));
-printf("size of float is = %d\n", sizeof(float));
+printf("size of char is = %c\n", sizeof(char));
+printf("size of int is = %d\n", sizeof(int));
+printf("size of long int is = %ld\n", sizeof(long int));
+printf("size of long long int is = %lld\n", sizeof(long long int));
+printf("size of float is = %f\n", sizeof(float));
+return (0);
 }
