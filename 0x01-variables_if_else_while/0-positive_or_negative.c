@@ -10,7 +10,7 @@ int main(void)
 int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
-n = 0;
+n > 0 ? n == o : n < o;
 if (n > 0)
 printf("n positive\n");
 else if (n < 0)
