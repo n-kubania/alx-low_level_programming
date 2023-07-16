@@ -11,13 +11,11 @@ int n;
 srand(time(0));
 n = rand() - RAND_MAX / 2;
 n = 0;
-}
 if (n > 0)
-{
-printf("positive\n");
-}
+printf("++n\n");
 else if (n < 0)
-{
-printf("negative\n");
+printf("--n\n");
+else if (n == 0)
+printf("0\n");
 return (0);
 }
