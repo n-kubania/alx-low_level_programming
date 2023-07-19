@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * main - A program that prints putschar
@@ -6,8 +6,7 @@
  */
 int main(void)
 {
-	{
-		printf("_putchar\n")
-	}
-	return (0)
+	_putchar("_putchar");
+	_putchar("\n");
+	return (0);
 }
