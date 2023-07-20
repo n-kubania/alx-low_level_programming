@@ -6,12 +6,13 @@
 
 int main(void)
 {
-	int a = 97;
+	int n = 97;
 
-	while (a  <= 122)	{
+	while (n <= 122)
+
 	{
-		putchar(a);
-		a++;
+		putchar(n);
+		n++;
 	}
 	putchar('\n');
 	return (0);
