@@ -4,7 +4,7 @@
  * Return: 0 Always (success)
  */
 
-int main(void)
+int main()
 {
 	for (int i = 0; i < 10; i++)
 	{
