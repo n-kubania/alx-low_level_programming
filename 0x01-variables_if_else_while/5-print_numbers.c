@@ -7,9 +7,10 @@
 int main(void)
 {
 	int i = 0;
+	(i < 10, i++);
+
 	{
 		printf("%d\n", i);
-		i < 10, i++;
 	}
 	return (0);
 }
