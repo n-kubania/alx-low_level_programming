@@ -12,8 +12,8 @@ int main(void)
 	{
 		if (n == 113 || n == 101)
 		{
-		continue;
 		n++;
+		continue;
 		}
 		putchar(n);
 		n++;
