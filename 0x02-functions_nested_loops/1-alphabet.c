@@ -1,8 +1,8 @@
 #include "main.h"
 /**
  * main - A program that prints alphabets in lowercase
- * Return: 0 always (success)
- */
+ * Return always 0 (success)
+ */ 
 
 int main(void)
 {
@@ -15,4 +15,5 @@ int main(void)
 		n++;
 	}
 	_putchar('\n');
+	return (0);
 }
