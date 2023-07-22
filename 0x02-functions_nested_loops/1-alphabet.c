@@ -1,18 +1,17 @@
 #include "main.h"
 /**
  * main - A program that prints alphabets in lowercase
- * Return always 0 (success)
- */ 
+ * Return: 0 always (success)
+ */
 
 int main(void)
 {
-	int n = 97;
+	char letter;
 
-	while (n <= 122)
-
+	for (letter = 'a'; letter <= 'z'; letter++)
 	{
-		_putchar(n);
-		n++;
+		_putchar(letter);
+		letter++;
 	}
 	_putchar('\n');
 	return (0);
