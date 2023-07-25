@@ -9,7 +9,18 @@
 
 void puts_half(char *str)
 {
-	scanf("%s.5", str);
-	puts(str);
+	int length = 0;
+	int half;
+
+	while (str[length] != '\0')
+		length++;
+	half = (length + 1) / 2;
+	while (half < length)
+
+	{
+		putchar(str[half]);
+		half++;
+	}
+	putchar('\n');
 }
 
