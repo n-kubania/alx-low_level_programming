@@ -9,5 +9,10 @@
 
 void puts2(char *str)
 {
-	puts(str);
+	int i;
+
+	for (i = 0; i % 2; i++)
+	{
+		puts(str);
+	}
 }
