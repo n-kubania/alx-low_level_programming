@@ -3,22 +3,25 @@
 #include <stdio.h>
 
 /**
- * _strcat -concatenates two strings
+ *  _strncat- concatenates two strings
  * @dest: destination string
  * @src: string being appended to dest
  * Return: pointer to the concatenated string
  */
-
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 {
-	int i;
 	int lendest = strlen(dest);
 	int lensrc = strlen(src);
 
-	for (i = 0; i <= lensrc; i++)
+	do
+
 	{
-		dest[lendest + i] = src[i];
+		(dest[lendest + n] = src[n]);
 	}
-		puts(dest);
-	return (dest);
+	while (n <= lensrc)
+		{
+		putchar(n++);
+		}
+	}
+	putchar('\n');
 }
