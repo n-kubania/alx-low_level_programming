@@ -1,6 +1,7 @@
 #include "main.h"
 
 /**
+<<<<<<< HEAD
  * reverse_array - reverses content of elements in an array
  * @a: an array of integers
  * @n: the number of integers to swap
@@ -19,3 +20,16 @@ void reverse_array(int *a, int n)
 	a[s2] = c;
 	}
 }
+=======
+ *reverse_array -reverses content of array
+ * @a: an array of integers
+ * @n: the number of elements to swap
+ *
+ * Return: nothing.
+ */
+void print_array(int *a, int n)
+{
+	int s1, s2, c;
+
+	while s2 
+>>>>>>> fe507883a7c0a2fc5d9701c2c68e2d0800e4addc
