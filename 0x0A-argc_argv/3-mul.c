@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -13,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	int x, y, result;
 	(void)argc;
-	if (argc != 2)
+	if (argc != 3)
 	{
 		printf("error\n");
 		return (1);
