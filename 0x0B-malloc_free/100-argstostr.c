@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
   * argstostr- Concatenates all arguements of the program
@@ -21,12 +22,10 @@ char *argstostr(int ac, char **av)
 	for (i = 0; i < ac; i++)
 	{
 		for (j = 0; av[i][j] != '\0'; j++)
-			length++;
-		length++;
+			length = length + strlen(av[i]);
 	}
-	length++;
 
-	ptrstr = malloc(sizeof(char) * length);
+	ptrstr = malloc(sizeof(char) * length + 1);
 	if (ptrstr == NULL)
 		return (NULL);
 
@@ -37,10 +36,10 @@ char *argstostr(int ac, char **av)
 			ptrstr[n] = av[i][j];
 			n++;
 		}
-		ptrstr[n] = ' ';
+		ptrstr[n] = '\n';
 		n++;
 	}
-	ptrstr[n - 1] = '\0';
+	ptrstr[n] = '\0';
 
 	return (ptrstr);
 }
