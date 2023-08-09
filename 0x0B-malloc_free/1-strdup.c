@@ -18,7 +18,7 @@ char *_strdup(char *str)
 
 	/* check if the input string pointer is not NULL */
 	for (length = 0; str[length] != '\0'; length++)
-	dest = malloc((length * sizeof(char)) + 1);
+	dest = malloc((str[length] * sizeof(char)) + 1);
 	/* allocate memory for the copy of the string */
 
 	if (dest == NULL)
