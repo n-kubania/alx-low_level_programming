@@ -72,3 +72,4 @@ error_handler(100, "Error: Can't close file descriptor");
 }
 
 return (0);
+}
