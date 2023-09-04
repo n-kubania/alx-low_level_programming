@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
   * read_textfile- reads a text file and prints it to the POSIX standard output
   * @filename: Pointer pointing to the file
@@ -9,34 +8,39 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;             /* File descriptor for the file to read. */
-	ssize_t total_bytes = 0; /* for total bytes. */
-	char ch;            /* Character for reading from the file. */
+	char *buffer;
+	ssize_t file;
+	ssize_t bytesw;
+	ssize_t bytesr;
 
-    /* Check if the filename is NULL. */
-	if (filename == NULL)
+	file = open(filename, O_RDONLY);
+	if (file == -1)
 	return (0);
 
-    /* Open the file for reading. */
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
-	return (0);
-
-    /* Read and print the file character by character. */
-	while (letters > 0 && read(fd, &ch, 1) == 1)
+	buffer = malloc(sizeof(char) * letters);
+	if (buffer == NULL)
 	{
-	ssize_t bytes_written = write(STDOUT_FILENO, &ch, 1);
-
-	if (bytes_written == -1)
-	{
-		close(fd);
-		return (total_bytes);
+		close(file);
+		return (0);
 	}
 
-	total_bytes += bytes_written;
-	letters--;
+	bytesr = read(file, buffer, letters);
+	if (bytesr == -1)
+	{
+		free(buffer);
+		close(file);
+		return (0);
 	}
 
-	close(fd);
-	return (total_bytes);
+	bytesw = write(STDOUT_FILENO, buffer, bytesr);
+	if (bytesw == -1)
+	{
+		free(buffer);
+		close(file);
+		return (0);
+	}
+
+	free(buffer);
+	close(file);
+	return (bytesw);
 }
