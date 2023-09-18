@@ -1,6 +1,5 @@
 #include "main.h"
-#include <string.h>
-#include <stdio.h>
+#include <unistd.h>
 
 /**
  * _puts - prints a string
@@ -10,5 +9,10 @@
 
 void _puts(char *str)
 {
-	puts(str);
+	while (*str)
+	{
+		write(STDOUT_FILENO, str, 1);
+		str++;
+	}
+	write(STDOUT_FILENO, "\n", 1);
 }
